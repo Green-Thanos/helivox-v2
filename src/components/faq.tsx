@@ -7,7 +7,7 @@ import {
 
 export default function FAQ() {
   return (
-    <section className="flex min-h-screen w-full items-center justify-center">
+    <section className="flex py-10 w-full items-center justify-center">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl space-y-6">
           <div className="text-center">

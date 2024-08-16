@@ -23,11 +23,11 @@ export default function NotFound() {
       </div>
     </div>
     <Image
-        src={'https://domain.tld/image.gif'}
+        src={'https://media.discordapp.net/attachments/1019031964453445772/1197716750553333851/kdafnlkdfmlkar.gif?ex=66a4f865&is=66a3a6e5&hm=580e7ae1f3d910df5e3c1e56a5e65bb017401798f73678c836b5a0894bdc05f6&='}
         layout={'responsive'}
-        height={175}
+        height={175}Q
         width={175}
-        alt={`A cute animal!`}
+        alt={`.`}
         unoptimized={true}
       />
     </>

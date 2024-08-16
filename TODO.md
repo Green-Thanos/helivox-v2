@@ -1,16 +1,18 @@
 # TODO
 
-- [ ] Strapi Integration
+- [ ] Strapi Integration For Events
+- [ ] Strapi Editor Permissions and heirarchy test
+- [ ] Strapi Meet the Team Page with uploaded pictures
 - [ ] Articles Page <<
 
-- [ ] Move home page components to own folder in app/components
+- [ ] ~~Move home page components to own folder in app/components~~ Fix Component Naming Scheme
 - [ ] Make Funtional Pages for all home page sections
-- [ ] Functional Newsletter API integration with resend, move to sendgrid if no way to manage email list.
+- [x] Functional Newsletter API integration with resend, move to sendgrid if no way to manage email list.
+- [ ] Implement Zod Email Validation and use actual form components (try to get rid of usestate) - Example form in fwiki repo
 
-Email Stack: Stored in pocketbase @ pockethost.io
-Tools: resend, sendgrid
 
-- [ ] Express server trick (is there a lighter weight alternative?)
+
+- [ ] Express server trick for backend (is there a lighter weight alternative?)
 
 https://uptimerobot.com/
 **server.ts**
