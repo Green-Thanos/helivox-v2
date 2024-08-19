@@ -38,7 +38,7 @@ const Header = () => {
       </Link>
 
       <nav className="flex items-center space-x-6">
-        {headerNavLinks
+        {/* {headerNavLinks
           .filter((link) => link.href !== "/")
           .map((link) => (
             <Link
@@ -50,7 +50,7 @@ const Header = () => {
             >
               {link.title}
             </Link>
-          ))}
+          ))} */}
         <Link href={headerIconLinks.instagram} aria-label="Instagram">
           <Instagram className="h-6 w-6 text-gray-900 transition-colors hover:text-[#E1306C] dark:text-gray-100" />
         </Link>
