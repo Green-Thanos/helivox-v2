@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { getStrapiMedia } from "@/lib/api-helpers";
 import Image from "next/image";
 
@@ -9,13 +9,17 @@ interface FadeProps {
   transitionDuration?: number;
 }
 
-export const Fade: React.FC<FadeProps> = ({ children, duration = 3000, transitionDuration = 1000 }) => {
+export const Fade: React.FC<FadeProps> = ({
+  children,
+  duration = 3000,
+  transitionDuration = 1000,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === React.Children.count(children) - 1 ? 0 : prevIndex + 1
+      setCurrentIndex((prevIndex) =>
+        prevIndex === React.Children.count(children) - 1 ? 0 : prevIndex + 1,
       );
     }, duration);
 
@@ -23,15 +27,15 @@ export const Fade: React.FC<FadeProps> = ({ children, duration = 3000, transitio
   }, [children, duration]);
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <div style={{ position: "relative", width: "100%", height: "100%" }}>
       {React.Children.map(children, (child, index) => (
         <div
           style={{
-            position: 'absolute',
+            position: "absolute",
             top: 0,
             left: 0,
-            width: '100%',
-            height: '100%',
+            width: "100%",
+            height: "100%",
             opacity: index === currentIndex ? 1 : 0,
             transition: `opacity ${transitionDuration}ms ease-in-out`,
           }}
@@ -68,7 +72,7 @@ export default function Slideshow({ data }: { data: SlidShowProps }) {
             <div key={index}>
               {imageUrl && (
                 <Image
-                  className="w-full h-96 object-cover rounded-lg"
+                  className="h-96 w-full rounded-lg object-cover"
                   height={400}
                   width={600}
                   alt="alt text"

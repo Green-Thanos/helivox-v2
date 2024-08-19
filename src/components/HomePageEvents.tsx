@@ -114,11 +114,11 @@ export default function HomePageEvents() {
         </div>
         <div className="mt-8 flex justify-center">
           <Link
-            href="#"
+            href="/events"
             className="inline-flex items-center text-primary transition-all hover:pr-2 hover:underline"
             prefetch={false}
           >
-            View Past Events{" "}
+            View More Events{" "}
             <MoveRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>

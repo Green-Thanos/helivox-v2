@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Twitter, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 interface TeamMemberProps {
   name: string;
@@ -18,7 +19,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   twitterUrl,
 }) => (
   <div className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
-    <img
+    <Image
       src={imageUrl}
       alt={name}
       width={400}

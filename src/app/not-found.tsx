@@ -1,35 +1,30 @@
-import Link from "@/components/Link";
-import Image from "next/image";
+import Link from "next/link";
+import { SpaceIcon } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <>
-    <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
-      <div className="space-x-2 pb-8 pt-6 md:space-y-5">
-        <h1 className="md:leading-14 text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:border-r-2 md:px-6 md:text-8xl">
-          404
+    <div className="flex flex-col items-center justify-center dark:bg-gray-900">
+      <div className="max-w-md px-4 text-center">
+        <div className="animate-bounce">
+          <SpaceIcon className="mx-auto h-32 w-32 text-gray-500 dark:text-gray-400" />
+        </div>
+        <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">
+          Oops, looks like you took a wrong turn!
         </h1>
-      </div>
-      <div className="max-w-md">
-        <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-          Sorry we couldn&apos;t find this page.
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          We seem to have lost this page in the void. Don&apos;t worry,
+          we&apos;ll send out a search party to find it.
         </p>
-        <Link
-          href="/"
-          className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-blue-700 focus:outline-none dark:hover:bg-blue-500"
-        >
-          Back to homepage
-        </Link>
+        <div className="mt-6">
+          <Link
+            href="/"
+            className="inline-flex items-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-200 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-900"
+            prefetch={false}
+          >
+            Take me back home
+          </Link>
+        </div>
       </div>
     </div>
-    <Image
-        src={'https://media.discordapp.net/attachments/1019031964453445772/1197716750553333851/kdafnlkdfmlkar.gif?ex=66a4f865&is=66a3a6e5&hm=580e7ae1f3d910df5e3c1e56a5e65bb017401798f73678c836b5a0894bdc05f6&='}
-        layout={'responsive'}
-        height={175}Q
-        width={175}
-        alt={`.`}
-        unoptimized={true}
-      />
-    </>
   );
 }

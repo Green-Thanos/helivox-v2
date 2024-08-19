@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MoveRight } from "lucide-react";
 
-export function HomePageTeam() {
+export default function HomePageTeam() {
   return (
     <section className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
@@ -15,7 +16,7 @@ export function HomePageTeam() {
         </div>
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="flex flex-col items-center gap-4 text-center">
-            <img
+            <Image
               src="/avatar1.svg"
               width={150}
               height={150}
@@ -30,7 +31,7 @@ export function HomePageTeam() {
             </div>
           </div>
           <div className="flex flex-col items-center gap-4 text-center">
-            <img
+            <Image
               src="/placeholder.svg"
               width={150}
               height={150}
@@ -45,7 +46,7 @@ export function HomePageTeam() {
             </div>
           </div>
           <div className="flex flex-col items-center gap-4 text-center">
-            <img
+            <Image
               src="/placeholder.svg"
               width={150}
               height={150}

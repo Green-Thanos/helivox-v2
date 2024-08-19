@@ -1,74 +1,20 @@
 import Link from "next/link";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { User, DollarSign, GraduationCap, DollarSignIcon, GraduationCapIcon} from "lucide-react";
 import Image from "next/image";
 
-import { HomePageTeam } from "@/components/HomePageTeam";
-import { HomePageBlog } from "@/components/HomePageBlog";
-
+import HomePageTeam from "@/components/HomePageTeam";
+import HomePageBlog from "@/components/HomePageBlog";
 import Hero from "@/components/Hero";
 import FAQ from "@/components/faq";
 import Newsletter from "@/components/newsletterSignup";
 import HomePageEvents from "@/components/HomePageEvents";
+import HomePageCards from "@/components/HomePageCards";
+import Testimonials from "@/components/Testimonials";
 
 export default function Component() {
   return (
-    <div className="flex min-h-[100dvh] flex-col">
+    <div className="mx-auto flex min-h-[100dvh] flex-col">
       <Hero />
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="space-y-4 rounded-xl bg-muted p-6">
-              <div className="flex items-center gap-4">
-                <Avatar>
-                  <AvatarImage src="/avatar1.svg" />
-                  <AvatarFallback>JD</AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-medium">John Doe</p>
-                  <p className="text-sm text-muted-foreground">Student</p>
-                </div>
-              </div>
-              <p className="text-lg">
-              &quot;Helivox helped me navigate the college application process with
-                confidence and ease. Their guidance was invaluable.&quot;
-              </p>
-            </div>
-            <div className="space-y-4 rounded-xl bg-muted p-6">
-              <div className="flex items-center gap-4">
-                <Avatar>
-                  <AvatarImage src="/placeholder-user.jpg" />
-                  <AvatarFallback>JD</AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-medium">Jane Doe</p>
-                  <p className="text-sm text-muted-foreground">Student</p>
-                </div>
-              </div>
-              <p className="text-lg">
-              &quot;Helivox&apos;s support was instrumental in helping me secure a
-                scholarship and achieve my dream of attending college.&quot;
-              </p>
-            </div>
-            <div className="space-y-4 rounded-xl bg-muted p-6">
-              <div className="flex items-center gap-4">
-                <Avatar>
-                  <AvatarImage src="/placeholder-user.jpg" />
-                  <AvatarFallback>JD</AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-medium">John Smith</p>
-                  <p className="text-sm text-muted-foreground">Student</p>
-                </div>
-              </div>
-              <p className="text-lg">
-              &quot;Helivox&apos;s comprehensive resources and personalized guidance
-                made the college application process much less daunting.&quot;
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Testimonials />
       <section className="bg-muted py-20 md:py-32">
         <div className="container mx-auto grid grid-cols-1 gap-8 px-4 md:grid-cols-2 md:px-6">
           <div className="space-y-4">
@@ -104,29 +50,8 @@ export default function Component() {
           />
         </div>
       </section>
+      <HomePageCards />
       <HomePageTeam />
-      <section className="bg-muted py-20 md:py-32">
-        <div className="container mx-auto grid grid-cols-1 gap-8 px-4 md:grid-cols-2 md:px-6 lg:grid-cols-3">
-          <div className="space-y-2 rounded-xl bg-background p-6 text-center">
-            <User className="h-12 w-12 text-primary" />
-            <p className="text-lg text-muted-foreground">
-              Serving over 5,000 students annually
-            </p>
-          </div>
-          <div className="space-y-2 rounded-xl bg-background p-6 text-center">
-            <DollarSignIcon className="h-12 w-12 text-primary" />
-            <p className="text-lg text-muted-foreground">
-              $5M+ in scholarships secured for students
-            </p>
-          </div>
-          <div className="space-y-2 rounded-xl bg-background p-6 text-center">
-            <GraduationCapIcon className="h-12 w-12 text-primary" />
-            <p className="text-lg text-muted-foreground">
-              90% of students enroll in a 4-year university
-            </p>
-          </div>
-        </div>
-      </section>
       <HomePageEvents />
       <HomePageBlog />
       <FAQ />
