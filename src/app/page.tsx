@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import HomePageTeam from "@/components/HomePageTeam";
-import HomePageBlog from "@/components/HomePageBlog";
+// import HomePageBlog from "@/components/HomePageBlog";
 import Hero from "@/components/Hero";
 import FAQ from "@/components/faq";
 import Newsletter from "@/components/newsletterSignup";
@@ -53,7 +53,7 @@ export default function Component() {
       <HomePageCards />
       <HomePageTeam />
       <HomePageEvents />
-      <HomePageBlog />
+      {/* <HomePageBlog /> */}
       <FAQ />
       <Newsletter />
     </div>

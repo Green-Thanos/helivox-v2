@@ -1,6 +1,6 @@
 "use client";
 
-import headerNavLinks from "@/data/headerNavLinks";
+// import headerNavLinks from "@/data/headerNavLinks";
 import { headerIconLinks } from "@/data/headerNavLinks";
 import Image from "next/image";
 import Link from "./Link";
@@ -23,7 +23,7 @@ function CodeIcon({ ...props }) {
 }
 
 const Header = () => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   return (
     <header className="flex items-center justify-between px-8 py-6">

@@ -12,8 +12,7 @@ export default function NotFound() {
           Oops, looks like you took a wrong turn!
         </h1>
         <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-          We seem to have lost this page in the void. Don&apos;t worry,
-          we&apos;ll send out a search party to find it.
+          We seem to have lost this page in the void.
         </p>
         <div className="mt-6">
           <Link

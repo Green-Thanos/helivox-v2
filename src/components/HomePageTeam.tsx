@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { MoveRight } from "lucide-react";
+import CircularProfileImage from "@/components/CircularProfileImage";
 
 export default function HomePageTeam() {
   return (
@@ -14,49 +14,31 @@ export default function HomePageTeam() {
             Get to know the leaders behind Helivox&apos;s mission.
           </p>
         </div>
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <Image
-              src="/avatar1.svg"
-              width={150}
-              height={150}
-              alt="Team Member 1"
-              className="rounded-full object-cover"
-            />
-            <div>
-              <p className="text-lg font-medium">Jeffrey Kim</p>
-              <p className="text-sm text-muted-foreground">
-                placeholder title and avatar
-              </p>
+        <div className="mt-8 flex justify-center">
+          <div className="grid grid-cols-2 gap-8 md:gap-x-16">
+            <div className="flex flex-col items-center gap-4 text-center">
+              <CircularProfileImage
+                src="/assets/jeffreykim.jpg"
+                alt="Team Member 1"
+                size={150}
+              />
+              <div>
+                <p className="text-lg font-medium">Jeffrey Kim</p>
+                <p className="text-sm text-muted-foreground">President</p>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col items-center gap-4 text-center">
-            <Image
-              src="/placeholder.svg"
-              width={150}
-              height={150}
-              alt="Team Member 2"
-              className="rounded-full object-cover"
-            />
-            <div>
-              <p className="text-lg font-medium">Jane Doe</p>
-              <p className="text-sm text-muted-foreground">
-                Executive Director
-              </p>
+            <div className="flex flex-col items-center gap-4 text-center">
+              <CircularProfileImage
+                src="/assets/julia.jpg"
+                alt="Team Member 2"
+                size={150}
+              />
+              <div>
+                <p className="text-lg font-medium">Julia Liang</p>
+                <p className="text-sm text-muted-foreground">Vice President</p>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col items-center gap-4 text-center">
-            <Image
-              src="/placeholder.svg"
-              width={150}
-              height={150}
-              alt="Team Member 3"
-              className="rounded-full object-cover"
-            />
-            <div>
-              <p className="text-lg font-medium">John Smith</p>
-              <p className="text-sm text-muted-foreground">Program Manager</p>
-            </div>
+            {/* You can add a third card here if needed */}
           </div>
         </div>
         <div className="mt-8 flex justify-center">

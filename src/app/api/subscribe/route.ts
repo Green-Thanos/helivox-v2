@@ -17,7 +17,7 @@ export async function POST(
   try {
     const { email } = (await req.json()) as SubscribeRequestBody; // Whats the best way to do these api calls?
 
-    const audienceId = "f8e308d5-d61d-46f7-bb00-9b5dd2d0767c";
+    const audienceId = "f9fa854b-746e-4427-be11-7b8af6154464";
 
     await resend.contacts.create({
       email,

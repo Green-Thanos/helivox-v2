@@ -1,4 +1,10 @@
+"use client";
+import { useState, useEffect } from "react";
+import { format, isPast, isFuture, parseISO } from "date-fns";
+import { getEvents, Event as ApiEvent } from "@/lib/calls";
+
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import {
   Card,
   CardHeader,
@@ -8,65 +14,112 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Calendar, MapPin } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
+
+// Define the Event type based on the structure you're using
+type Event = ApiEvent;
 
 export default function Events() {
-  const upcomingEvents = [
-    {
-      title: "College Application Workshop",
-      description:
-        "Interactive workshop on navigating the college application process.",
-      date: "June 15, 2023",
-      time: "6:00 PM - 8:00 PM",
-      location: "123 Main Street, Anytown USA",
-    },
-    {
-      title: "Scholarship Application Workshop",
-      description:
-        "Learn strategies to maximize your chances of securing scholarships.",
-      date: "July 20, 2023",
-      time: "6:00 PM - 8:00 PM",
-      location: "456 Oak Avenue, Anytown USA",
-    },
-    {
-      title: "Financial Aid Information Session",
-      description:
-        "Get the latest updates on financial aid and learn how to maximize your opportunities.",
-      date: "August 5, 2023",
-      time: "6:00 PM - 8:00 PM",
-      location: "789 Elm Street, Anytown USA",
-    },
-  ];
+  const [events, setEvents] = useState<Event[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const pastEvents = [
-    {
-      date: "January 10, 2023",
-      title: "Community Clean-Up Day",
-      description:
-        "A successful event where volunteers came together to clean up local parks and streets.",
-      location: "Anytown USA",
-    },
-    {
-      date: "March 5, 2023",
-      title: "Fundraising Gala",
-      description:
-        "An elegant evening of dining and entertainment to raise funds for our community programs.",
-      location: "Anytown USA",
-    },
-    {
-      date: "June 22, 2023",
-      title: "Youth Mentoring Workshop",
-      description:
-        "A workshop aimed at empowering young individuals through mentorship and skill-building activities.",
-      location: "Anytown USA",
-    },
-    {
-      date: "September 15, 2023",
-      title: "Health Fair",
-      description:
-        "A community event providing free health screenings, information, and resources to local residents.",
-      location: "Anytown USA",
-    },
-  ];
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        setIsLoading(true);
+        const fetchedEvents = await getEvents(0, 100);
+        console.log(fetchedEvents);
+        setEvents(fetchedEvents);
+      } catch (err) {
+        console.error("Error fetching events:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchEvents().catch((err) => {
+      console.error("Error fetching events:", err);
+    });
+  }, []);
+
+  const upcomingEvents = events
+    .filter((event) => isFuture(new Date(event.attributes.date)))
+    .sort(
+      (a, b) =>
+        new Date(a.attributes.date).getTime() -
+        new Date(b.attributes.date).getTime(),
+    );
+
+  const pastEvents = events
+    .filter((event) => isPast(new Date(event.attributes.date)))
+    .sort(
+      (a, b) =>
+        new Date(b.attributes.date).getTime() -
+        new Date(a.attributes.date).getTime(),
+    );
+
+  if (isLoading) {
+    return (
+      <div className="container mx-auto px-4 py-12">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Upcoming Events
+          </h2>
+          <p className="mx-auto max-w-[700px] pt-6 text-gray-500 md:text-xl">
+            Stay up-to-date with our upcoming events and workshops.
+          </p>
+        </div>
+        <div className="mb-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* Skeleton cards for loading state */}
+          {Array.from({ length: 3 }).map((_, index) => (
+            <Card key={index} className="h-full">
+              <CardHeader>
+                <Skeleton className="mb-2 h-6 w-3/4" />
+                <Skeleton className="h-4 w-1/2" />
+              </CardHeader>
+              <CardContent>
+                <div className="mb-4 flex items-center">
+                  <Skeleton className="mr-2 h-5 w-5" />
+                  <div>
+                    <Skeleton className="mb-1 h-4 w-32" />
+                    <Skeleton className="h-3 w-20" />
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Skeleton className="mr-2 h-5 w-5" />
+                  <Skeleton className="h-4 w-3/4" />
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Skeleton className="h-10 w-full" />
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+        <div className="mb-12 pt-12 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Past Events
+          </h2>
+          <p className="mx-auto max-w-[700px] pt-6 text-gray-500 md:text-xl">
+            Our past projects and milestones.
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <ol className="relative max-w-2xl border-s border-gray-200">
+            {/* Skeleton list items for loading state */}
+            {Array.from({ length: 3 }).map((_, index) => (
+              <li key={index} className="mb-10 ms-4">
+                <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full bg-gray-200"></div>
+                <Skeleton className="mb-2 h-4 w-32" />
+                <Skeleton className="mb-2 h-5 w-48" />
+                <Skeleton className="h-4 w-36" />
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -79,27 +132,33 @@ export default function Events() {
         </p>
       </div>
       <div className="mb-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {upcomingEvents.map((event, index) => (
-          <Card key={index} className="h-full">
+        {upcomingEvents.map((event) => (
+          <Card key={event.id} className="h-full">
             <CardHeader>
-              <CardTitle>{event.title}</CardTitle>
-              <CardDescription>{event.description}</CardDescription>
+              <CardTitle>{event.attributes.name}</CardTitle>
+              <CardDescription>{event.attributes.description}</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex items-center">
                 <Calendar className="mr-2" />
                 <div>
-                  <p>{event.date}</p>
-                  <p className="text-sm text-gray-500">{event.time}</p>
+                  <p>
+                    {format(parseISO(event.attributes.date), "MMMM d, yyyy")}
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    {format(parseISO(event.attributes.date), "h:mm a")}
+                  </p>
                 </div>
               </div>
               <div className="mt-4 flex items-center">
                 <MapPin className="mr-2" />
-                <p className="text-gray-500">{event.location}</p>
+                <p className="text-gray-500">{event.attributes.location}</p>
               </div>
             </CardContent>
             <CardFooter>
-              <Button>RSVP</Button>
+              <Button asChild>
+                <Link href={event.attributes.rsvp ?? "/#"}>RSVP</Link>
+              </Button>
             </CardFooter>
           </Card>
         ))}
@@ -114,21 +173,25 @@ export default function Events() {
         </p>
       </div>
       <div className="flex justify-center">
-        <ol className="relative max-w-2xl border-s  border-gray-200">
+        <ol className="relative max-w-2xl border-s border-gray-200">
           {pastEvents.map((event, index) => (
             <li
-              key={index}
+              key={event.id}
               className={`ms-4 ${
                 index !== pastEvents.length - 1 ? "mb-10" : ""
               }`}
             >
               <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full bg-gray-200"></div>
               <time className="mb-1 text-sm font-normal leading-none">
-                {event.date}
+                {format(parseISO(event.attributes.date), "MMMM d, yyyy")}
               </time>
-              <h3 className="text-lg font-semibold">{event.title}</h3>
-              <p className="mb-4 text-base font-normal">{event.description}</p>
-              <p className="text-sm font-medium">{event.location}</p>
+              <h3 className="text-lg font-semibold">{event.attributes.name}</h3>
+              <p className="mb-4 text-base font-normal">
+                {event.attributes.description}
+              </p>
+              <p className="text-sm font-medium">
+                {event.attributes.location.split(",")[1]}
+              </p>
             </li>
           ))}
         </ol>

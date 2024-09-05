@@ -1,4 +1,4 @@
-import { EmailTemplate } from "@/components/EmailTemplate";
+import { EmailTemplate } from "@/data/EmailTemplate";
 import { Resend } from "resend";
 import { getToken } from "next-auth/jwt";
 import type { NextRequest } from "next/server";
