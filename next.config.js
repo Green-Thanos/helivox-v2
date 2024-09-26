@@ -6,6 +6,15 @@ await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
+  async redirects() {
+    return [
+      {
+        source: '/legacy',
+        destination: 'https://legacy.helivox.com',
+        permanent: true,
+      },
+    ]
+  },
   images: {
     remotePatterns: [
       {
