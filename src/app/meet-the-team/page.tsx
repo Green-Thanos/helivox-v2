@@ -67,13 +67,13 @@ export default function Team() {
         <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {Members.map(
             (member) =>
-              member.attributes.LinkedIn.url && (
+              (
                 <TeamMember
                   key={member.id}
                   name={member.attributes.name}
-                  title="Project Manager"
+                  title={member.attributes.title}
                   imageUrl={member.attributes.avatar.data.attributes.url}
-                  linkedinUrl={member.attributes?.LinkedIn.url}
+                  // linkedinUrl={member.attributes?.LinkedIn.url}
                 />
               ),
           )}

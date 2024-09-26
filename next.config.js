@@ -14,6 +14,9 @@ const config = {
         port: "1337",
         pathname: "/**",
       },
+      {
+        hostname: "res.cloudinary.com",
+      }
     ],
   },
 };

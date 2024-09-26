@@ -1,4 +1,4 @@
-import { User, DollarSignIcon, GraduationCapIcon } from "lucide-react";
+import { User, DollarSignIcon, UsersIcon } from "lucide-react";
 
 export default function HomePageCards() {
   return (
@@ -7,28 +7,28 @@ export default function HomePageCards() {
         <div className="space-y-2 rounded-xl bg-background p-6 text-center">
           <div className="flex items-center justify-center">
             <User className="h-12 w-12 text-primary" />
-            <h2 className="ml-2 text-2xl font-bold">5,000+</h2>
+            <h2 className="ml-2 text-2xl font-bold">300+</h2>
           </div>
           <p className="text-lg text-muted-foreground">
-            Students served annually
+            Students served this year
           </p>
         </div>
         <div className="space-y-2 rounded-xl bg-background p-6 text-center">
           <div className="flex items-center justify-center">
             <DollarSignIcon className="h-12 w-12 text-primary" />
-            <h2 className="ml-2 text-2xl font-bold">5M+</h2>
+            <h2 className="ml-2 text-2xl font-bold">1500+</h2>
           </div>
           <p className="text-lg text-muted-foreground">
-            In scholarships secured for students
+            In Donations
           </p>
         </div>
         <div className="space-y-2 rounded-xl bg-background p-6 text-center">
           <div className="flex items-center justify-center">
-            <GraduationCapIcon className="h-12 w-12 text-primary" />
-            <h2 className="ml-2 text-2xl font-bold">90%</h2>
+            <UsersIcon className="h-12 w-12 text-primary" />
+            <h2 className="ml-2 text-2xl font-bold">75+</h2>
           </div>
           <p className="text-lg text-muted-foreground">
-            Of students enroll in a 4-year university
+            Team Members
           </p>
         </div>
       </div>

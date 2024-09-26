@@ -9,22 +9,22 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    name: "James Khawalski",
-    role: "CEO, Mavoline",
+    name: "Student Parent",
+    role: "Freshman Success Start",
     comment:
-      "Absolutely recommended! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores facere repellendus, velit quis fugiat.",
+      "It was really helpful, and they provided a lot of information about high schools, AP courses, sports, and club informatoin. This was a really great and helpful session for me as an immigrant parent and hopefully it will impact my child her freshman year.",
   },
   {
-    name: "Jacob Jones",
-    role: "Youtube Personality",
+    name: "Anneesh Vijaisarath",
+    role: "DSAT Prep Event Attendee",
     comment:
-      "Service was amazing! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores facere repellendus, velit quis fugiat.",
+      "Great content! The material given for the practices were very informative as to what we can expect from the real DSATs. The explanatinos given for each question were very detailed and helped me truly understand how to classify and think about ways to answer questions on the DSAT. This session really cleared up the questions and concerns I had about this newly created DSAT and helped build my confidence towards taking this exam.",
   },
   {
-    name: "Jenny Wilson",
-    role: "Esports Commentator",
+    name: "Krish Vijay",
+    role: "UC Athenticity Seminar Attendee",
     comment:
-      "Saved me 1000s of hours. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores facere repellendus, velit quis fugiat.",
+      "\"Helivox is goated\"",
   },
 ];
 

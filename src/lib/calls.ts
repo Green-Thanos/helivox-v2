@@ -38,6 +38,7 @@ export interface Member {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
+    title: string;
     avatar: {
       url: string;
       data: {
@@ -222,6 +223,7 @@ async function fetchEvents<T>(
 
 export async function submitForm(data: FormData): Promise<void> {
   try {
+    console.log("submitform function")
     const token = process.env.STRAPI_FORM_TOKEN;
     const options = {
       method: "POST",
@@ -232,7 +234,7 @@ export async function submitForm(data: FormData): Promise<void> {
       body: JSON.stringify({ data }),
     };
 
-    console.log("Form submit attempt");
+    console.log("Form submit attempt!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
     const response = await fetchAPI("/form-submissions", {}, options);
 
     console.log(response);
