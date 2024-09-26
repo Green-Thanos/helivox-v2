@@ -23,8 +23,7 @@ const testimonials: TestimonialProps[] = [
   {
     name: "Krish Vijay",
     role: "UC Athenticity Seminar Attendee",
-    comment:
-      "\"Helivox is goated\"",
+    comment: '"Helivox is goated"',
   },
 ];
 

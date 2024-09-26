@@ -18,18 +18,14 @@ export default function HomePageCards() {
             <DollarSignIcon className="h-12 w-12 text-primary" />
             <h2 className="ml-2 text-2xl font-bold">1500+</h2>
           </div>
-          <p className="text-lg text-muted-foreground">
-            In Donations
-          </p>
+          <p className="text-lg text-muted-foreground">In Donations</p>
         </div>
         <div className="space-y-2 rounded-xl bg-background p-6 text-center">
           <div className="flex items-center justify-center">
             <UsersIcon className="h-12 w-12 text-primary" />
             <h2 className="ml-2 text-2xl font-bold">75+</h2>
           </div>
-          <p className="text-lg text-muted-foreground">
-            Team Members
-          </p>
+          <p className="text-lg text-muted-foreground">Team Members</p>
         </div>
       </div>
     </section>

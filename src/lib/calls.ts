@@ -223,7 +223,7 @@ async function fetchEvents<T>(
 
 export async function submitForm(data: FormData): Promise<void> {
   try {
-    console.log("submitform function")
+    console.log("submitform function");
     const token = process.env.STRAPI_FORM_TOKEN;
     const options = {
       method: "POST",

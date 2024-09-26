@@ -42,17 +42,15 @@ export default function Contact() {
     e.preventDefault();
     console.log("handlesubmit");
     try {
-      
-          await submitForm(form);
-          setForm({
-            inquiryType: InquiryType.General,
-            name: "",
-            email: "",
-            phone: "",
-            message: "",
-          });
-          alert("Form submitted successfully!");
-      
+      await submitForm(form);
+      setForm({
+        inquiryType: InquiryType.General,
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      alert("Form submitted successfully!");
     } catch (error) {
       console.error("Form submission error:", error);
       alert("There was an error submitting the form. Please try again.");

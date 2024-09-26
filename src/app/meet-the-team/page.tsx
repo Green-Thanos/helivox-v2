@@ -65,18 +65,15 @@ export default function Team() {
           </p>
         </div>
         <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {Members.map(
-            (member) =>
-              (
-                <TeamMember
-                  key={member.id}
-                  name={member.attributes.name}
-                  title={member.attributes.title}
-                  imageUrl={member.attributes.avatar.data.attributes.url}
-                  // linkedinUrl={member.attributes?.LinkedIn.url}
-                />
-              ),
-          )}
+          {Members.map((member) => (
+            <TeamMember
+              key={member.id}
+              name={member.attributes.name}
+              title={member.attributes.title}
+              imageUrl={member.attributes.avatar.data.attributes.url}
+              // linkedinUrl={member.attributes?.LinkedIn.url}
+            />
+          ))}
         </div>
       </div>
     </section>

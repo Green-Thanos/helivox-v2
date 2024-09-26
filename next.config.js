@@ -9,11 +9,11 @@ const config = {
   async redirects() {
     return [
       {
-        source: '/legacy',
-        destination: 'https://legacy.helivox.com',
+        source: "/legacy",
+        destination: "https://legacy.helivox.com",
         permanent: true,
       },
-    ]
+    ];
   },
   images: {
     remotePatterns: [
@@ -25,7 +25,7 @@ const config = {
       },
       {
         hostname: "res.cloudinary.com",
-      }
+      },
     ],
   },
 };
