@@ -7,7 +7,7 @@ export default function HomePageCards() {
         <div className="space-y-2 rounded-xl bg-background p-6 text-center">
           <div className="flex items-center justify-center">
             <User className="h-12 w-12 text-primary" />
-            <h2 className="ml-2 text-2xl font-bold">300+</h2>
+            <h2 className="ml-2 text-2xl font-bold">500+</h2>
           </div>
           <p className="text-lg text-muted-foreground">
             Students served this year
@@ -16,14 +16,14 @@ export default function HomePageCards() {
         <div className="space-y-2 rounded-xl bg-background p-6 text-center">
           <div className="flex items-center justify-center">
             <DollarSignIcon className="h-12 w-12 text-primary" />
-            <h2 className="ml-2 text-2xl font-bold">1500+</h2>
+            <h2 className="ml-2 text-2xl font-bold">2000+</h2>
           </div>
           <p className="text-lg text-muted-foreground">In Donations</p>
         </div>
         <div className="space-y-2 rounded-xl bg-background p-6 text-center">
           <div className="flex items-center justify-center">
             <UsersIcon className="h-12 w-12 text-primary" />
-            <h2 className="ml-2 text-2xl font-bold">75+</h2>
+            <h2 className="ml-2 text-2xl font-bold">75</h2>
           </div>
           <p className="text-lg text-muted-foreground">Team Members</p>
         </div>
