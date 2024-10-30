@@ -22,48 +22,55 @@ export default function FAQ() {
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1" className="mb-4">
                 <AccordionTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left text-lg font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
-                  What is the pricing structure?
+                  Who runs Helivox?
                   <div className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
                 </AccordionTrigger>
                 <AccordionContent className="rounded-b-md bg-muted px-4 py-3 text-muted-foreground">
-                  Our pricing is based on the number of users and features you
-                  need. We offer a range of plans to fit your budget and
-                  requirements. You can check our pricing page for more details.
+                  Helivox is operated entirely by high school students, spanning
+                  5 schools in 4 districts and 2 states, who are passionate
+                  about educational equity and volunteer work. Our organization
+                  is led by President Jeffrey Kim and Vice President Julia
+                  Liang, along with our sector heads: Programming - Jonathan
+                  Liang, Marketing - Abha Singh, Graphics - Emma Ku, Social
+                  Media - Isabella Doss, Writing - Aazif Hussain, HR - Jaeyoung
+                  Kwon, Projects - Sashinath Nadigotti.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="mb-4">
                 <AccordionTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left text-lg font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
-                  How do I get started?
+                  Is Helivox a legitimate nonprofit?
                   <div className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
                 </AccordionTrigger>
                 <AccordionContent className="rounded-b-md bg-muted px-4 py-3 text-muted-foreground">
-                  Getting started is easy! Simply sign up on our website and
-                  follow the onboarding steps. Our team is also available to
-                  help you get set up and answer any questions you might have.
+                  Yes, Helivox is a registered 501(c) nonprofit organization and
+                  is PVSA-certified (President&apos;s Volunteer Service Award). We
+                  maintain full transparency in our operations and financial
+                  management.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3" className="mb-4">
                 <AccordionTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left text-lg font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
-                  What kind of support do you offer?
+                  How can I volunteer with Helivox?
                   <div className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
                 </AccordionTrigger>
                 <AccordionContent className="rounded-b-md bg-muted px-4 py-3 text-muted-foreground">
-                  We offer a range of support options, including email support,
-                  live chat, and a comprehensive knowledge base. Our team is
-                  dedicated to providing timely and helpful assistance to ensure
-                  you get the most out of our product.
+                  We welcome student volunteers who are passionate about
+                  education and helping others: feel free to apply through the
+                  “Get Involved” section and send an email to
+                  helivoxofficial@helivox.com. The President and HR Head will
+                  get in touch with you shortly.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="mb-4">
                 <AccordionTrigger className="flex w-full items-center justify-between rounded-md bg-muted px-4 py-3 text-left text-lg font-medium transition-colors hover:bg-muted/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
-                  Do you offer any integrations?
+                  How can I attend Helivox events?
                   <div className="h-5 w-5 transition-transform duration-300 [&[data-state=open]]:rotate-180" />
                 </AccordionTrigger>
                 <AccordionContent className="rounded-b-md bg-muted px-4 py-3 text-muted-foreground">
-                  Yes, we offer a wide range of integrations with popular
-                  business tools and platforms. This allows you to seamlessly
-                  connect our product with the tools you already use, making
-                  your workflow more efficient.
+                  You can view our upcoming events on our website&apos;s Events page.
+                  Registration is typically required and can be completed
+                  online. We recommend following our social media channels for
+                  the latest updates on new events and workshops.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

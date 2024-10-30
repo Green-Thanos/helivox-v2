@@ -23,7 +23,8 @@ const testimonials: TestimonialProps[] = [
   {
     name: "Krish Vijay",
     role: "UC Athenticity Seminar Attendee",
-    comment: "The college authenticity workshop by Helivox turned out to be exactly what I needed at this point in my journey. Helivox is truly leveling the playing field, teaching various pathways to a higher education that I hadn't considered before. The essay breakdown was great.",
+    comment:
+      "The college authenticity workshop by Helivox turned out to be exactly what I needed at this point in my journey. Helivox is truly leveling the playing field, teaching various pathways to a higher education that I hadn't considered before. The essay breakdown was great.",
   },
 ];
 
