@@ -14,33 +14,49 @@ export default function HomePageTeam() {
             Get to know the leaders behind Helivox&apos;s mission.
           </p>
         </div>
-        <div className="mt-8 flex justify-center">
-          <div className="grid grid-cols-2 gap-8 md:gap-x-16">
-            <div className="flex flex-col items-center gap-4 text-center">
-              <CircularProfileImage
-                src="/assets/jeffreykim.jpg"
-                alt="Team Member 1"
-                size={150}
-              />
-              <div>
-                <p className="text-lg font-medium">Jeffrey Kim</p>
-                <p className="text-sm text-muted-foreground">President</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center gap-4 text-center">
-              <CircularProfileImage
-                src="/assets/julia.jpg"
-                alt="Team Member 2"
-                size={150}
-              />
-              <div>
-                <p className="text-lg font-medium">Julia Liang</p>
-                <p className="text-sm text-muted-foreground">Vice President</p>
-              </div>
-            </div>
-            {/* You can add a third card here if needed */}
-          </div>
-        </div>
+        <div className="mt-8 flex flex-wrap justify-center gap-x-16 gap-y-10">
+  
+  <div className="w-40 flex flex-col items-center gap-4 text-center">
+    <CircularProfileImage
+      src="/assets/abha.jpg"
+      alt="Team Member 1"
+      size={150}
+    />
+    <div>
+      <p className="text-lg font-medium">Abha Singh</p>
+      <p className="text-sm text-muted-foreground">Co-President</p>
+    </div>
+  </div>
+
+  <div className="w-40 flex flex-col items-center gap-4 text-center">
+    <CircularProfileImage
+      src="/assets/emma.jpg"
+      alt="Team Member 2"
+      size={150}
+    />
+    <div>
+      <p className="text-lg font-medium">Emma Ku</p>
+      <p className="text-sm text-muted-foreground">Co-President</p>
+    </div>
+  </div>
+
+  <div className="w-full" />
+
+  <div className="w-40 flex flex-col items-center gap-4 text-center">
+    <CircularProfileImage
+      src="/assets/jaeyoung.JPG"
+      alt="Team Member 3"
+      size={150}
+    />
+    <div>
+      <p className="text-lg font-medium">Jaeyoung Kwon</p>
+      <p className="text-sm text-muted-foreground">Vice President</p>
+    </div>
+  </div>
+</div>
+
+{/*fourth member here*/}
+
         <div className="mt-8 flex justify-center">
           <Link
             href="/meet-the-team"
