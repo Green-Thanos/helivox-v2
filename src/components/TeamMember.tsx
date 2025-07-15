@@ -27,7 +27,7 @@ export default function TeamMember({
         alt={name}
         width={400}
         height={400}
-        className="h-80 w-full object-cover object-center" // Adjust the height as needed
+        className="h-80 w-full object-cover object-top" // Adjust the height as needed
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#00000080] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       <div className="absolute bottom-0 left-0 w-full bg-background/80 px-4 py-3 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
