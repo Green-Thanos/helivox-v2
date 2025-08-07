@@ -29,11 +29,10 @@ export default function FAQ() {
                   Helivox is operated entirely by high school students, spanning
                   5 schools in 4 districts and 2 states, who are passionate
                   about educational equity and volunteer work. Our organization
-                  is led by President Jeffrey Kim and Vice President Julia
-                  Liang, along with our sector heads: Programming - Jonathan
-                  Liang, Marketing - Abha Singh, Graphics - Emma Ku, Social
-                  Media - Isabella Doss, Writing - Aazif Hussain, HR - Jaeyoung
-                  Kwon, Projects - Sashinath Nadigotti.
+                  is led by Co-Presidents Emma Ku and Abha Singh, and Vice President Jaeyoung Kwon, 
+                  along with our sector heads: Programming - Aryan
+                  Goswami, Marketing - Advik Dogra, Graphics - Advik Tatavarthi,
+                  Writing - Krish Gupta, HR - Daniel Cho
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="mb-4">
