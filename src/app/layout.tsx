@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
@@ -108,6 +109,7 @@ export default function RootLayout({
           <main className="mb-auto">{children}</main>
           <Footer />
         </div>
+        <Analytics/>
       </body>
     </html>
   );
