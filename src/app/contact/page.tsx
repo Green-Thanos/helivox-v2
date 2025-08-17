@@ -10,7 +10,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { FormData, submitForm, InquiryType } from "@/lib/calls";
+import { type FormData, submitForm, InquiryType } from "@/lib/calls";
 
 export default function Contact() {
   const [form, setForm] = useState<FormData>({
@@ -73,6 +73,11 @@ export default function Contact() {
           <p className="mt-3 text-lg text-gray-500">
             Have a question or want to work with us? Fill out the form below and
             we&apos;ll get back to you as soon as possible.
+          </p>
+          <p className="mt-3 text-lg text-gray-500">
+            Developer note: We are sorry that the form is running into issues. 
+            For now, feel free to reach out to us directly at {" "}
+            <a className="mt-3 text-lg text-green-500" href="mailto:helivoxofficial@helivox.com">helivoxofficial@helivox.com</a>!
           </p>
         </div>
         <form
